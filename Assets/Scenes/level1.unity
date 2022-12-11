@@ -459,4 +459,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 712926371}
-  offset: 5
+  smoothTime: 0.3
+  limits: {x: 5, y: 3}

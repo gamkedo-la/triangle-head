@@ -7,7 +7,10 @@ public class CameraFollow : MonoBehaviour
 
     public Transform target;
     public float smoothTime = 0.3F;
+    public Vector2 limits;
     private Vector3 velocity = Vector3.zero;
+
+
 
 
     // Start is called before the first frame update
@@ -24,6 +27,13 @@ public class CameraFollow : MonoBehaviour
 
         // Smoothly move the camera towards that target position
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+    }
+
+    void LateUpdate()
+    {
+        Vector3 localPos = transform.localPosition;
+        transform.localPosition = new Vector3(Mathf.Clamp(localPos.x, -limits.x, limits.x), Mathf.Clamp(localPos.y, -limits.y, limits.y), localPos.z);   
+        //look at his FollowTarget code on line 50 re: offset
     }
 
     /*

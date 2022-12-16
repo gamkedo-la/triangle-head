@@ -7,18 +7,40 @@ public class PlayerMovement : MonoBehaviour
 
     public float xySpeed = 2;
 
+    //i dont think yaw makes sense
+    //if we are copying SF, the ship animates into a roll and pitch
+    //but you're just holding down left right
+    //not sure how that translates to physics
+
+    private float pitch;
+    private float yaw;
+
+    private float v;
+    private float h;
+
     // Start is called before the first frame update
     void Start()
     {
     
     }
 
+    Rigidbody rb;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    private void HandleInputs(){
+        v = Input.GetAxis("Vertical");
+        h = Input.GetAxis("Horizontal");
+    }
+
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxis("Mouse X");
-        float v = Input.GetAxis("Mouse Y");
-
+        
+        HandleInputs();
         LocalMove(h, v, xySpeed);
         ClampPosition();
     }

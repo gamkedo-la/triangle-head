@@ -43,7 +43,20 @@ public class PlayerMovement : MonoBehaviour
         HandleInputs();
         LocalMove(h, v, xySpeed);
         ClampPosition();
+
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("collision has happened!");
+    }
+
+    /*
+    void OnTriggerEnter(Collision collision)
+    {
+        //Debug.Log(collision);
+    }
+    */
 
     void LocalMove(float x, float y, float speed)
     {

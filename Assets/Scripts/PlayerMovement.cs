@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("collision has happened!");
+        transform.localPosition -= new Vector3(5, 0, 0);
     }
 
     /*

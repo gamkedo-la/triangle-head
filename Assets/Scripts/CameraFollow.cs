@@ -32,7 +32,7 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate()
     {
         Vector3 localPos = transform.localPosition;
-        transform.localPosition = new Vector3(Mathf.Clamp(localPos.x, -limits.x, limits.x), Mathf.Clamp(localPos.y, -limits.y, limits.y), localPos.z);   
+         transform.localPosition = new Vector3(Mathf.Clamp(localPos.x, -limits.x, limits.x), Mathf.Clamp(localPos.y, -limits.y, limits.y), localPos.z);   
         //look at his FollowTarget code on line 50 re: offset
     }
 

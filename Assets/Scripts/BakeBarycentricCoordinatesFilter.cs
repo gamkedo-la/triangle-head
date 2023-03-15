@@ -15,6 +15,9 @@ public class BakeBarycentricCoordinatesFilter : MonoBehaviour
             return;
         }
 
+        var hasTangents = mesh.HasVertexAttribute(VertexAttribute.Tangent);
+        var hasUv1 = mesh.HasVertexAttribute(VertexAttribute.TexCoord1);
+
         var oldTriangles = mesh.triangles;
         var numberOfVertices = oldTriangles.Length; 
 
@@ -22,21 +25,31 @@ public class BakeBarycentricCoordinatesFilter : MonoBehaviour
         var triangles = new int[numberOfVertices];
         var vertices = new Vector3[numberOfVertices];
         var uv0 = new Vector2[numberOfVertices];
-        var uv1 = new Vector2[numberOfVertices];
+        var uv1 = hasUv1 ? new Vector2[numberOfVertices] : null;
         var normals = new Vector3[numberOfVertices];
-        var tangents = new Vector4[numberOfVertices];
+        var tangents = hasTangents ? new Vector4[numberOfVertices] : null;
 
         var oldNumberOfVertices = mesh.vertexCount;
         var oldVertices = new List<Vector3>(oldNumberOfVertices);
         mesh.GetVertices(oldVertices);
         var oldUv0 = new List<Vector2>(oldNumberOfVertices);
         mesh.GetUVs(0, oldUv0);
-        var oldUv1 = new List<Vector2>(oldNumberOfVertices);
-        mesh.GetUVs(1, oldUv1);
+        List<Vector2> oldUv1 = null;
+        if (hasUv1)
+        {
+            oldUv1 = new List<Vector2>(oldNumberOfVertices);
+            mesh.GetUVs(1, oldUv1);
+        }
+
         var oldNormals = new List<Vector3>(oldNumberOfVertices);
         mesh.GetNormals(oldNormals);
-        var oldTangents = new List<Vector4>(oldNumberOfVertices);
-        mesh.GetTangents(oldTangents);
+        List<Vector4> oldTangents = null;
+        if (hasTangents)
+        {
+            oldTangents = new List<Vector4>(oldNumberOfVertices);
+            mesh.GetTangents(oldTangents);
+        }
+
 
         // Need to make each vertex unique in order to properly interpolate over barycentric coordinates
         // (What the geometry shader did, but here we bake it in the mesh instead)
@@ -49,9 +62,16 @@ public class BakeBarycentricCoordinatesFilter : MonoBehaviour
                 triangles[vi] = vi;
                 vertices[vi] = oldVertices[oldIndex];
                 uv0[vi] = oldUv0[oldIndex];
-                uv1[vi] = oldUv1[oldIndex];
+                if (hasUv1)
+                {
+                    uv1[vi] = oldUv1[oldIndex];
+                }
+
                 normals[vi] = oldNormals[oldIndex];
-                tangents[vi] = oldTangents[oldIndex];
+                if (hasTangents)
+                {
+                    tangents[vi] = oldTangents[oldIndex];
+                }
             }
 
             barycentric[i] = Vector3.right;
@@ -65,9 +85,17 @@ public class BakeBarycentricCoordinatesFilter : MonoBehaviour
         };
         mesh.SetVertices(vertices);
         mesh.SetNormals(normals);
-        mesh.SetTangents(tangents);
+        if (hasTangents)
+        {
+            mesh.SetTangents(tangents);
+        }
+
         mesh.SetUVs(0, uv0);
-        mesh.SetUVs(1, uv1);
+        if (hasUv1)
+        {
+            mesh.SetUVs(1, uv1);
+        }
+
         mesh.SetUVs(2, barycentric);
         mesh.SetTriangles(triangles, 0);
         mesh.UploadMeshData(true);

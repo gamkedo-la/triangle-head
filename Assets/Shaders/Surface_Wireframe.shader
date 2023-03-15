@@ -9,6 +9,7 @@ Shader "Custom/Surface_Wireframe"
         
         _WireframeColor("Wireframe Color", Color) = (1, 1, 1, 1)
         _WireframeWidth("Wireframe Width", float) = 1
+        _WireframeEmissive("Wireframe Emission Strength", Range(0,1)) = 0
     }
     SubShader
     {
@@ -41,6 +42,7 @@ Shader "Custom/Surface_Wireframe"
         fixed4 _Color;
         float _WireframeWidth;
         half4 _WireframeColor;
+        float _WireframeEmissive;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -66,6 +68,7 @@ Shader "Custom/Surface_Wireframe"
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
             o.Alpha = c.a;
+            o.Emission = lerp(half3(0,0,0), _WireframeColor, wireframe * _WireframeEmissive);
         }
         ENDCG
     }

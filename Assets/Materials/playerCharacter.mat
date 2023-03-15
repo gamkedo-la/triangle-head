@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: playerCharacter
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: e930ef0d86e46a942a3ce71502ff289f, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -73,8 +73,11 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _WireframeEmissive: 0
+    - _WireframeWidth: 1
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.39270356, g: 0.990566, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _WireframeColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

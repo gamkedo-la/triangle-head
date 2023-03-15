@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    public Transform playerModel;
+    private float damageOffset = 0.0f;
+
     public float xySpeed = 2;
 
     //i dont think yaw makes sense
@@ -43,13 +46,21 @@ public class PlayerMovement : MonoBehaviour
         HandleInputs();
         LocalMove(h, v, xySpeed);
         ClampPosition();
+        playerModel.localPosition = damageOffset * (-Vector3.forward);
 
+    }
+
+    void FixedUpdate(){
+        damageOffset *= 0.9f; //note: non-linear needs a percentage
+        //losing 10% each update
+        //this requires fixed update
     }
 
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("collision has happened!");
-        transform.localPosition -= new Vector3(0, 0, 5);
+        //transform.localPosition -= new Vector3(0, 0, 5);
+        damageOffset = 5.0f; //max severity
     }
 
     /*

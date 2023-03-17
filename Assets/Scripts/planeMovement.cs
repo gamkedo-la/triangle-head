@@ -13,6 +13,6 @@ public class planeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * Time.deltaTime;
+        transform.position += (transform.forward * 5) * Time.deltaTime;
     }
 }

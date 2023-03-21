@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8359bc60f84ce39ecc9e13a227788f, type: 3}
+  m_Name: Collision
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 3ecbf4db08224024f81103b8a03105a8, type: 3}
+  - {fileID: 8300000, guid: 4cdf20d5ba0101f45bc24371a695cd86, type: 3}
+  - {fileID: 8300000, guid: 7ad8ac6c25e187649befcb4b2bb3a5b4, type: 3}
+  - {fileID: 8300000, guid: 196ef7f217568784fa0df5cc5c589b60, type: 3}
+  playStyle: 1

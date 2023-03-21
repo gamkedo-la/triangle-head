@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float xySpeed = 2;
 
+    public MultiAudioClip collisionAudio;
+    
     //i dont think yaw makes sense
     //if we are copying SF, the ship animates into a roll and pitch
     //but you're just holding down left right
@@ -28,10 +30,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
     Rigidbody rb;
+    private AudioSource audioSource;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void HandleInputs(){
@@ -61,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("collision has happened!");
         //transform.localPosition -= new Vector3(0, 0, 5);
         damageOffset = 5.0f; //max severity
+        audioSource.PlayOneShot(collisionAudio);
     }
 
     /*

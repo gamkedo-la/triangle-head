@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Material yellowMaterial;
     public Material redMaterial;
 
+    Transform triangleHeadModel;
     private Renderer renderer;
     public Transform playerModel;
     private float damageOffset = 0.0f;
@@ -32,7 +33,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        renderer = GetComponent<Renderer>();
+        triangleHeadModel = transform.Find("triangle-head");
+        renderer = triangleHeadModel.GetComponent<Renderer>();
+        
     }
 
     Rigidbody rb;

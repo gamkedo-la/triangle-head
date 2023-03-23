@@ -6,6 +6,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    public int playerHealth = 3;
+    public Material yellowMaterial;
+    public Material redMaterial;
+
+    private Renderer renderer;
     public Transform playerModel;
     private float damageOffset = 0.0f;
 
@@ -27,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    
+        renderer = GetComponent<Renderer>();
     }
 
     Rigidbody rb;
@@ -63,7 +68,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collision has happened!");
+        Debug.Log(playerHealth);
+        playerHealth--;
+
+        if (playerHealth == 2)
+        {
+            renderer.material = yellowMaterial;
+        }
+        else if (playerHealth == 1)
+        {
+            renderer.material = redMaterial;
+        }
+        else if (playerHealth == 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }        
         //SceneManager.LoadScene("GameOver");
         //transform.localPosition -= new Vector3(0, 0, 5);
         damageOffset = 5.0f; //max severity

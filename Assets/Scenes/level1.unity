@@ -1943,8 +1943,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 3
-  yellowMaterial: {fileID: 2100000, guid: 9bc5d14afdba24d0694dd8c058460cc9, type: 2}
-  redMaterial: {fileID: 2100000, guid: 0fff40601eff84eaebf1232f99e88f37, type: 2}
+  yellowMaterial: {fileID: 2100000, guid: dcc4a419bc4064920951a7495f08bf3f, type: 2}
+  redMaterial: {fileID: 2100000, guid: e7d38f05143bc854297b1dbdb355d591, type: 2}
   playerModel: {fileID: 462539608}
   xySpeed: 100
   collisionAudio: {fileID: 11400000, guid: 465461f98b11d2949b0037acec4c761a, type: 2}

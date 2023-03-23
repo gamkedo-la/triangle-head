@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -63,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("collision has happened!");
+        SceneManager.LoadScene("GameOver");
         //transform.localPosition -= new Vector3(0, 0, 5);
         damageOffset = 5.0f; //max severity
         audioSource.PlayOneShot(collisionAudio);

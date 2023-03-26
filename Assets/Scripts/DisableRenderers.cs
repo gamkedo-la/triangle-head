@@ -4,27 +4,33 @@ using UnityEngine;
 
 public class DisableRenderers : MonoBehaviour
 {
-    public Transform playerTransform;
-    public float disableDistance = 10f;
+        public Transform playerTransform;
+    public float disableDistance = 100f;
 
     private Renderer[] renderers;
+    private bool[] originalRendererStates;
 
     private void Start()
     {
         renderers = GetComponentsInChildren<Renderer>();
+        originalRendererStates = new bool[renderers.Length];
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            originalRendererStates[i] = renderers[i].enabled;
+        }
     }
 
     private void Update()
     {
-        foreach (Renderer renderer in renderers)
+        for (int i = 0; i < renderers.Length; i++)
         {
-            if (Vector3.Distance(renderer.transform.position, playerTransform.position) > disableDistance)
+            if (Vector3.Distance(renderers[i].transform.position, playerTransform.position) > disableDistance)
             {
-                renderer.enabled = false;
+                renderers[i].enabled = false;
             }
             else
             {
-                renderer.enabled = true;
+                renderers[i].enabled = originalRendererStates[i];
             }
         }
     }

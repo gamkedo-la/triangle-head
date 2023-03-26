@@ -4277,7 +4277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1498831749
 Transform:
   m_ObjectHideFlags: 0
@@ -5394,7 +5394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950843596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 33.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5419,7 +5419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 712926371}
-  disableDistance: 10
+  disableDistance: 20
 --- !u!1 &1972507945
 GameObject:
   m_ObjectHideFlags: 0
@@ -6416,6 +6416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rotating-obstacle2
       objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3770612465359177303, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -6621,6 +6625,10 @@ PrefabInstance:
     - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: m_Name
       value: rotating-obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3770612465359177303, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: m_Enabled

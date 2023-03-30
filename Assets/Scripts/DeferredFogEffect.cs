@@ -42,4 +42,3 @@ public class DeferredFogEffect : MonoBehaviour {
 		Graphics.Blit(source, destination, fogMaterial);
 	}
 }
-//test commit - will delete

@@ -28,6 +28,9 @@ ExportedObj/
 # VS Code config files
 .vscode
 
+# VS Code config files
+.vsconfig
+
 # Visual Studio config files
 .vs
 

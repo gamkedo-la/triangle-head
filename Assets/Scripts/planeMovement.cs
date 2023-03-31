@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class planeMovement : MonoBehaviour
 {
+    public int speed = 5;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,6 @@ public class planeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += (transform.forward * 5) * Time.deltaTime;
+        transform.position += (transform.forward * speed) * Time.deltaTime;
     }
 }

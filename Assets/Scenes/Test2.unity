@@ -3141,7 +3141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042206117397186988, guid: 298863ca5a7064adf8161cff2c55ee9f, type: 3}
       propertyPath: sliderSpeed
-      value: 2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6042206117397186988, guid: 298863ca5a7064adf8161cff2c55ee9f, type: 3}
       propertyPath: sliderDistance
@@ -5738,7 +5738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197021192023188278, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
       propertyPath: speed
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}

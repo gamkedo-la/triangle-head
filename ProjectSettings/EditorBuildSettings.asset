@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Test2.unity
+    path: Assets/Scenes/Test-Sliders.unity
     guid: f7e9c82451e644c0b8f9b946406e0cb1
   - enabled: 1
     path: Assets/Scenes/DemoLevel.unity

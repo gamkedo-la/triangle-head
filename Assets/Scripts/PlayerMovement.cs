@@ -101,7 +101,12 @@ public class PlayerMovement : MonoBehaviour
 
     void LocalMove(float x, float y, float speed)
     {
-        transform.localPosition += new Vector3(x, y, 0) * speed * Time.deltaTime;
+        
+        //this takes HV input, h, then v
+        //transform.localPosition += new Vector3(x, y, 0) * speed * Time.deltaTime;
+        Vector3 movement = new Vector3(x, v, 0f);
+        transform.position = Vector3.Lerp(transform.position, transform.position + movement * speed, Time.fixedDeltaTime * 10f);
+        //^ this might do the trick is LocalMove is called every Update
     }
 
     void ClampPosition(){

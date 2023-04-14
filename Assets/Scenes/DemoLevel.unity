@@ -6018,6 +6018,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3197021191900822166, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
+      propertyPath: xySpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3197021192023188272, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
       propertyPath: m_Name
       value: GameplayPlane

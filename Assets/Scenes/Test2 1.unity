@@ -5600,6 +5600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9beb3711877c34bae9bbfb345b55c952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.1
 --- !u!54 &1197021342353152990
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5688,6 +5689,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3197021191900822166, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
+      propertyPath: xySpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3197021192023188272, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
       propertyPath: m_Name
       value: GameplayPlane
@@ -5738,7 +5743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197021192023188278, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
       propertyPath: speed
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}

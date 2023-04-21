@@ -118,10 +118,19 @@ public class PlayerMovement : MonoBehaviour
     }*/
 
     void ClampPosition(){
+
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         pos.x = Mathf.Clamp(pos.x, 0.2f, 0.8f);
         pos.y = Mathf.Clamp(pos.y, 0.2f, 0.8f);
         transform.position = Camera.main.ViewportToWorldPoint(pos);
+
+        /*
+        Vector3 pos = transform.position; //have to make a copy first
+        pos.x = Mathf.Clamp(pos.x, leftEdge.position.x, rightEdge.position.x);
+        pos.y = Mathf.Clamp(pos.y, topEdge.position.y, bottomEdge.position.y);
+        transform.position = pos;
+        */
+
     }
 
 

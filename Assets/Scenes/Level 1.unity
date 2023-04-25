@@ -275,6 +275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spinner (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
 --- !u!4 &51102950 stripped
@@ -531,6 +535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spinner (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 3770612465359177303, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: speed
       value: -0.3
@@ -596,6 +604,10 @@ PrefabInstance:
     - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: m_Name
       value: spinner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3770612465359177303, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: speed
@@ -1080,6 +1092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: medium column (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1142,6 +1158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: medium column (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -1203,6 +1223,10 @@ PrefabInstance:
     - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_Name
       value: medium column (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
@@ -1465,6 +1489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: medium column (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1576,6 +1604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spinner (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 3770612465359177303, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: speed
       value: 0.2
@@ -1597,6 +1629,10 @@ PrefabInstance:
     - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_Name
       value: medium column (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
@@ -1754,6 +1790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: medium column (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -1815,6 +1855,10 @@ PrefabInstance:
     - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_Name
       value: medium column (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
@@ -1878,6 +1922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: medium column (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -1939,6 +1987,10 @@ PrefabInstance:
     - target: {fileID: 6786983530366674510, guid: 3ec8d9c6d70984780a2ab636e22cfb14, type: 3}
       propertyPath: m_Name
       value: large column (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786983530366674510, guid: 3ec8d9c6d70984780a2ab636e22cfb14, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6786983530366674511, guid: 3ec8d9c6d70984780a2ab636e22cfb14, type: 3}
       propertyPath: m_RootOrder
@@ -2101,6 +2153,10 @@ PrefabInstance:
     - target: {fileID: 6786983530366674510, guid: 3ec8d9c6d70984780a2ab636e22cfb14, type: 3}
       propertyPath: m_Name
       value: large column (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786983530366674510, guid: 3ec8d9c6d70984780a2ab636e22cfb14, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6786983530366674511, guid: 3ec8d9c6d70984780a2ab636e22cfb14, type: 3}
       propertyPath: m_RootOrder
@@ -2307,6 +2363,10 @@ PrefabInstance:
     - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: m_Name
       value: spinner (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3770612465359177303, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: speed
@@ -2621,6 +2681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: medium column (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2779,6 +2843,10 @@ PrefabInstance:
     - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_Name
       value: medium column
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
@@ -3075,6 +3143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spinner (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 3770612465359177303, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: speed
       value: 0.3
@@ -3096,6 +3168,10 @@ PrefabInstance:
     - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_Name
       value: medium column (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
@@ -3685,6 +3761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: medium column (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -3898,6 +3978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spinner (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 3770612465359177303, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: speed
       value: 0.2
@@ -4082,6 +4166,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: medium column (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -4144,6 +4232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: medium column (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -4205,6 +4297,10 @@ PrefabInstance:
     - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_Name
       value: medium column (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
@@ -4523,6 +4619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spinner (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 3770612465359177303, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: speed
       value: -0.1
@@ -4840,6 +4940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spinner (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 3770612465359177303, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: speed
       value: -0.2
@@ -5150,6 +5254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: medium column (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5255,6 +5363,10 @@ PrefabInstance:
     - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: m_Name
       value: spinner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3770612465359177303, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: speed
@@ -5369,6 +5481,10 @@ PrefabInstance:
     - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_Name
       value: medium column (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711529, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_RootOrder
@@ -5528,6 +5644,10 @@ PrefabInstance:
     - target: {fileID: 6786983530366674510, guid: 3ec8d9c6d70984780a2ab636e22cfb14, type: 3}
       propertyPath: m_Name
       value: large column (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786983530366674510, guid: 3ec8d9c6d70984780a2ab636e22cfb14, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6786983530366674511, guid: 3ec8d9c6d70984780a2ab636e22cfb14, type: 3}
       propertyPath: m_RootOrder
@@ -5946,6 +6066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spinner (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
 --- !u!4 &2051917081 stripped
@@ -6104,6 +6228,10 @@ PrefabInstance:
     - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
       propertyPath: m_Name
       value: spinner
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770612465359177297, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d073f757120d44d27a317ccc85d0f007, type: 3}
@@ -6329,7 +6457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197021192023188273, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 879.55
+      value: -5.05
       objectReference: {fileID: 0}
     - target: {fileID: 3197021192023188273, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6434,6 +6562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spinner (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6692623141722375231, guid: 1d640f56deb3846beaa455fa769d9268, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d640f56deb3846beaa455fa769d9268, type: 3}
 --- !u!1001 &8889572476813645057
@@ -6490,6 +6622,10 @@ PrefabInstance:
     - target: {fileID: 2697144484066809699, guid: d126cb3e4425044b683a583a3a31e850, type: 3}
       propertyPath: m_Name
       value: large column (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697144484066809699, guid: d126cb3e4425044b683a583a3a31e850, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d126cb3e4425044b683a583a3a31e850, type: 3}

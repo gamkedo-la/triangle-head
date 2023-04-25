@@ -75,25 +75,28 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(playerHealth);
-        playerHealth--;
+        if (other.CompareTag("Obstacle"))
+        {
+            Debug.Log(playerHealth);
+            playerHealth--;
 
-        if (playerHealth == 2)
-        {
-            renderer.material = yellowMaterial;
+            if (playerHealth == 2)
+            {
+                renderer.material = yellowMaterial;
+            }
+            else if (playerHealth == 1)
+            {
+                renderer.material = redMaterial;
+            }
+            else if (playerHealth == 0)
+            {
+                SceneManager.LoadScene("GameOver");
+            }        
+            //SceneManager.LoadScene("GameOver");
+            //transform.localPosition -= new Vector3(0, 0, 5);
+            damageOffset = 5.0f; //max severity
+            audioSource.PlayOneShot(collisionAudio);
         }
-        else if (playerHealth == 1)
-        {
-            renderer.material = redMaterial;
-        }
-        else if (playerHealth == 0)
-        {
-            SceneManager.LoadScene("GameOver");
-        }        
-        //SceneManager.LoadScene("GameOver");
-        //transform.localPosition -= new Vector3(0, 0, 5);
-        damageOffset = 5.0f; //max severity
-        audioSource.PlayOneShot(collisionAudio);
     }
 
     /*

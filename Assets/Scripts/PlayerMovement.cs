@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public Material yellowMaterial;
     public Material redMaterial;
 
-    Transform triangleHeadModel;
+    public Transform triangleHeadModel;
     private Renderer renderer;
     public Transform playerModel;
     private float damageOffset = 0.0f;
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        triangleHeadModel = transform.Find("triangle-head");
+        //triangleHeadModel = transform.Find("triangle-head");
         renderer = triangleHeadModel.GetComponent<Renderer>();
         
     }
@@ -82,11 +82,13 @@ public class PlayerMovement : MonoBehaviour
 
             if (playerHealth == 2)
             {
-                renderer.material = yellowMaterial;
+                //renderer.material = yellowMaterial;
+                renderer.material.SetColor("_Color", Color.yellow);
             }
             else if (playerHealth == 1)
             {
-                renderer.material = redMaterial;
+                //renderer.material = redMaterial;
+                renderer.material.SetColor("_Color", Color.red);
             }
             else if (playerHealth == 0)
             {

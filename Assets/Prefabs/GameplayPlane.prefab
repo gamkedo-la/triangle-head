@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3197021191900822171}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +113,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078faa1fc25d04cef8e6b604990d7e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  topBoundary: {fileID: 0}
+  rightBoundary: {fileID: 0}
+  bottomBoundary: {fileID: 0}
+  leftBoundary: {fileID: 0}
   playerHealth: 3
   yellowMaterial: {fileID: 2100000, guid: dcc4a419bc4064920951a7495f08bf3f, type: 2}
   redMaterial: {fileID: 2100000, guid: e7d38f05143bc854297b1dbdb355d591, type: 2}

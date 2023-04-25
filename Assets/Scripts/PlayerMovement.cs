@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         HandleInputs();
         LocalMove(h, v, xySpeed);
         ClampPosition();
-        playerModel.localPosition = damageOffset * (-Vector3.forward);
+        //playerModel.localPosition = damageOffset * (-Vector3.forward);
 
     }
 

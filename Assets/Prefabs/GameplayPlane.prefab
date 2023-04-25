@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3197021191900822160}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.57577616, y: -0, z: -0, w: 0.81760734}
   m_LocalPosition: {x: 0, y: 0, z: 17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -38,7 +38,7 @@ Transform:
   - {fileID: 3158325885027103374}
   m_Father: {fileID: 3197021192023188273}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 70.308, y: 0, z: 0}
 --- !u!33 &3197021191900822165
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   yellowMaterial: {fileID: 2100000, guid: dcc4a419bc4064920951a7495f08bf3f, type: 2}
   redMaterial: {fileID: 2100000, guid: e7d38f05143bc854297b1dbdb355d591, type: 2}
   triangleHeadModel: {fileID: 9117213894259392101}
-  playerModel: {fileID: 9117213894259392101}
+  playerModel: {fileID: 1366495308723041143}
   xySpeed: 1.75
   collisionAudio: {fileID: 11400000, guid: 465461f98b11d2949b0037acec4c761a, type: 2}
 --- !u!54 &3197021191900822170
@@ -438,6 +438,10 @@ PrefabInstance:
     - target: {fileID: 2301176812166345901, guid: a0a553bd7fd0b46778dd47ad38ea327e, type: 3}
       propertyPath: m_Name
       value: triangle-head-mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 2301176812166345901, guid: a0a553bd7fd0b46778dd47ad38ea327e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0a553bd7fd0b46778dd47ad38ea327e, type: 3}

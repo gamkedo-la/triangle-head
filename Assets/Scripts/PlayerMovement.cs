@@ -68,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate(){
-        Debug.Log(topBoundary.position.y);
         damageOffset *= 0.9f; //note: non-linear needs a percentage
         //losing 10% each update
         //this requires fixed update
@@ -85,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 //renderer.material = yellowMaterial;
                 renderer.material.SetColor("_Color", Color.yellow);
+                //^ changing the material might have slight advantages over chaging the material's property
             }
             else if (playerHealth == 1)
             {
@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
         //this takes HV input, h, then v
         //transform.localPosition += new Vector3(x, y, 0) * speed * Time.deltaTime;
         Vector3 movement = new Vector3(x, v, 0f);
-        transform.position = Vector3.Lerp(transform.position, transform.position + movement * speed, Time.fixedDeltaTime * 10f);
+        transform.position = Vector3.Lerp(transform.position, transform.position + movement * speed, Time.deltaTime * 10f);
         //^ this might do the trick is LocalMove is called every Update
     }
 

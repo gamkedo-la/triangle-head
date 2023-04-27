@@ -68,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate(){
+        Debug.Log(topBoundary.position.y);
         damageOffset *= 0.9f; //note: non-linear needs a percentage
         //losing 10% each update
         //this requires fixed update
@@ -128,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
 
     void ClampPosition(){
 
+        
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         pos.x = Mathf.Clamp(pos.x, 0.2f, 0.8f);
         pos.y = Mathf.Clamp(pos.y, 0.2f, 0.8f);
@@ -136,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
         /*
         Vector3 pos = transform.position; //have to make a copy first
         pos.x = Mathf.Clamp(pos.x, leftBoundary.position.x, rightBoundary.position.x);
-        pos.y = Mathf.Clamp(pos.y, topBoundary.position.y, bottomBoundary.position.y);
+        pos.y = Mathf.Clamp(pos.y, bottomBoundary.position.y, topBoundary.position.y);
         transform.position = pos;
         */
         

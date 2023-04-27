@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform playerModel;
     private float damageOffset = 0.0f;
 
-    public float xySpeed = 2;
+    public float xySpeed = 2.0f;
 
     public MultiAudioClip collisionAudio;
     

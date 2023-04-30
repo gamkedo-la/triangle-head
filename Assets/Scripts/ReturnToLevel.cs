@@ -15,7 +15,7 @@ public class ReturnToLevel : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.R)) {
-            SceneManager.LoadScene("level1");
+            SceneManager.LoadScene("level 1");
         }
     }
 }

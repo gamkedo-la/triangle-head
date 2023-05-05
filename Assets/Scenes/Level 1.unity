@@ -396,7 +396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1699234809201711528, guid: 4ef0d4c7a42c4422a9e039dc6f47dcc6, type: 3}
       propertyPath: m_TagString
@@ -6696,10 +6696,6 @@ PrefabInstance:
       propertyPath: leftBoundary
       value: 
       objectReference: {fileID: 1474296135}
-    - target: {fileID: 3197021191900822166, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
-      propertyPath: playerHealth
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3197021191900822166, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
       propertyPath: rightBoundary
       value: 

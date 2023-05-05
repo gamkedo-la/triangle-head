@@ -77,6 +77,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        CheckCollision(other);
+    }
+
+    public bool CheckCollision(Collider other)
+    {
         if (other.CompareTag("Obstacle"))
         {
             Debug.Log(playerHealth);
@@ -101,12 +106,16 @@ public class PlayerMovement : MonoBehaviour
                 //set planeSpeed to 0 (will stop game movement)
                 //death animation
                 //
-            }        
+            }
+
             //SceneManager.LoadScene("GameOver");
             //transform.localPosition -= new Vector3(0, 0, 5);
             damageOffset = 5.0f; //max severity
             audioSource.PlayOneShot(collisionAudio);
+            return true;
         }
+
+        return false;
     }
 
     /*

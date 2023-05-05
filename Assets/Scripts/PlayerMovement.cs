@@ -93,7 +93,12 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (playerHealth == 0)
             {
-                SceneManager.LoadScene("GameOver");
+                //SceneManager.LoadScene("GameOver");
+                StartCoroutine(WaitThenGameOver());
+                //^ set the above to a timer 3s
+                //set planeSpeed to 0 (will stop game movement)
+                //death animation
+                //
             }        
             //SceneManager.LoadScene("GameOver");
             //transform.localPosition -= new Vector3(0, 0, 5);
@@ -108,6 +113,17 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(collision);
     }
     */
+
+    IEnumerator WaitThenGameOver(){
+        planeMovement pmScript = gameObject.GetComponentInParent<planeMovement>();
+        pmScript.enabled = false;
+        for(int i = 0; i < transform.childCount; i++){
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
+        yield return new WaitForSeconds(2.0f);
+        //Debug.Log("gameover");
+        SceneManager.LoadScene("GameOver");
+    }
 
     void LocalMove(float x, float y, float speed)
     {

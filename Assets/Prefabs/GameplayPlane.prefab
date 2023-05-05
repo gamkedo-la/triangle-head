@@ -125,6 +125,7 @@ MonoBehaviour:
   playerModel: {fileID: 1366495308723041143}
   xySpeed: 1.75
   collisionAudio: {fileID: 11400000, guid: 465461f98b11d2949b0037acec4c761a, type: 2}
+  DeathExplosion: {fileID: 1018118532566934806, guid: 04b9e97ba29b945878e9ba96e3457c89, type: 3}
 --- !u!54 &3197021191900822170
 Rigidbody:
   m_ObjectHideFlags: 0

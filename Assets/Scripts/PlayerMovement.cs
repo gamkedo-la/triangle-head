@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public float xySpeed = 2.0f;
 
     public MultiAudioClip collisionAudio;
+
+    public GameObject DeathExplosion;
     
     //i dont think yaw makes sense
     //if we are copying SF, the ship animates into a roll and pitch
@@ -120,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
         for(int i = 0; i < transform.childCount; i++){
             transform.GetChild(i).gameObject.SetActive(false);
         }
+        GameObject.Instantiate(DeathExplosion, transform.position, Quaternion.identity); //keeps the explosion upright
         yield return new WaitForSeconds(2.0f);
         //Debug.Log("gameover");
         SceneManager.LoadScene("GameOver");

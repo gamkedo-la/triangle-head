@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class ReturnToLevel : MonoBehaviour
 {
+
+    public string levelName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +17,8 @@ public class ReturnToLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.R)) {
-            SceneManager.LoadScene("level 1");
+        if (Input.GetKey(KeyCode.Space)) {
+            SceneManager.LoadScene(levelName);
         }
     }
 }

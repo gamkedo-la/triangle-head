@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelEndCollider : MonoBehaviour
 {
+
+    public string levelName;
+
     // This method is called when a collider enters the trigger
     private void OnTriggerEnter(Collider other)
     {
@@ -12,7 +15,7 @@ public class LevelEndCollider : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Load the "Level1Complete" scene
-            SceneManager.LoadScene("Level1Complete");
+            SceneManager.LoadScene(levelName);
         }
     }
 }

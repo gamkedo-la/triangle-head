@@ -6669,6 +6669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e78579eeaac462ab56489d6b9b82e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelName: Level1Complete
 --- !u!1001 &3197021191468129842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6722,7 +6723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197021192023188273, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -103.4
+      value: -84
       objectReference: {fileID: 0}
     - target: {fileID: 3197021192023188273, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
       propertyPath: m_LocalRotation.w

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3197021191900822166}
   - component: {fileID: 3197021191900822170}
   - component: {fileID: 3197021191900822171}
+  - component: {fileID: 430889175}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -100,8 +101,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.47, y: 2.05, z: 2.12}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.75, y: 2, z: 1}
+  m_Center: {x: 0, y: 0.91, z: 0}
 --- !u!114 &3197021191900822166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ MonoBehaviour:
   redMaterial: {fileID: 2100000, guid: e7d38f05143bc854297b1dbdb355d591, type: 2}
   triangleHeadModel: {fileID: 9117213894259392101}
   playerModel: {fileID: 1366495308723041143}
-  xySpeed: 1.75
+  xySpeed: 2
   collisionAudio: {fileID: 11400000, guid: 465461f98b11d2949b0037acec4c761a, type: 2}
   DeathExplosion: {fileID: 1018118532566934806, guid: 04b9e97ba29b945878e9ba96e3457c89, type: 3}
 --- !u!54 &3197021191900822170
@@ -238,6 +239,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &430889175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3197021191900822160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0b52dacb11497aab17b7b695be4b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3197021192023188272
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7542d3292b614746a012446bfe81c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 45
 --- !u!1 &3197021192153445187
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3197021192153445187}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.6, z: -10}
+  m_LocalPosition: {x: 0, y: 7.6, z: -5.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -343,7 +356,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 17
+  near clip plane: 1
   far clip plane: 1000
   field of view: 60
   orthographic: 0

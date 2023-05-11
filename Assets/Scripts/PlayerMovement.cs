@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip deathAudio;
 
     public GameObject DeathExplosion;
+
+    private float recoverySeconds = 0.0f;
+    private float timeToRecovery = 1.0f;
     
     //i dont think yaw makes sense
     //if we are copying SF, the ship animates into a roll and pitch
@@ -63,6 +66,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         
+        if(recoverySeconds > 0.0f){
+            recoverySeconds -= Time.deltaTime; //this isn't machine depedant, deltaTime is time between frames
+        } 
         HandleInputs();
         LocalMove(h, v, xySpeed);
         ClampPosition();
@@ -85,6 +91,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
+            if(recoverySeconds > 0.0f){
+                return false;
+            }
+            recoverySeconds = timeToRecovery;
             Debug.Log(playerHealth);
             playerHealth--;
 
@@ -115,10 +125,9 @@ public class PlayerMovement : MonoBehaviour
             //SceneManager.LoadScene("GameOver");
             //transform.localPosition -= new Vector3(0, 0, 5);
             damageOffset = 5.0f; //max severity
-            //audioSource.PlayOneShot(collisionAudio);
+            //audioSource.PlayOneShot(collisionAudio);   
             return true;
         }
-
         return false;
     }
 

@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public float xySpeed = 2.0f;
 
     public MultiAudioClip collisionAudio;
+    public AudioClip deathAudio;
 
     public GameObject DeathExplosion;
     
@@ -92,11 +93,13 @@ public class PlayerMovement : MonoBehaviour
                 //renderer.material = yellowMaterial;
                 renderer.material.SetColor("_Color", Color.yellow);
                 //^ changing the material might have slight advantages over chaging the material's property
+                audioSource.PlayOneShot(collisionAudio);
             }
             else if (playerHealth == 1)
             {
                 //renderer.material = redMaterial;
                 renderer.material.SetColor("_Color", Color.red);
+                audioSource.PlayOneShot(collisionAudio);
             }
             else if (playerHealth == 0)
             {
@@ -106,12 +109,13 @@ public class PlayerMovement : MonoBehaviour
                 //set planeSpeed to 0 (will stop game movement)
                 //death animation
                 //
+                audioSource.PlayOneShot(deathAudio);
             }
 
             //SceneManager.LoadScene("GameOver");
             //transform.localPosition -= new Vector3(0, 0, 5);
             damageOffset = 5.0f; //max severity
-            audioSource.PlayOneShot(collisionAudio);
+            //audioSource.PlayOneShot(collisionAudio);
             return true;
         }
 

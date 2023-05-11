@@ -13,8 +13,5 @@ MonoBehaviour:
   m_Name: Collision
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 3ecbf4db08224024f81103b8a03105a8, type: 3}
-  - {fileID: 8300000, guid: 4cdf20d5ba0101f45bc24371a695cd86, type: 3}
-  - {fileID: 8300000, guid: 7ad8ac6c25e187649befcb4b2bb3a5b4, type: 3}
-  - {fileID: 8300000, guid: 196ef7f217568784fa0df5cc5c589b60, type: 3}
+  - {fileID: 8300000, guid: d70dfbd19b3454b9d9af5e1ecec585d9, type: 3}
   playStyle: 1

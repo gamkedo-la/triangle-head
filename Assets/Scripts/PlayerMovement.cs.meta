@@ -3,7 +3,18 @@ guid: 078faa1fc25d04cef8e6b604990d7e0e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - topBoundary: {instanceID: 0}
+  - rightBoundary: {instanceID: 0}
+  - bottomBoundary: {instanceID: 0}
+  - leftBoundary: {instanceID: 0}
+  - yellowMaterial: {instanceID: 0}
+  - redMaterial: {instanceID: 0}
+  - triangleHeadModel: {instanceID: 0}
+  - playerModel: {instanceID: 0}
+  - collisionAudio: {instanceID: 0}
+  - deathAudio: {fileID: 8300000, guid: 81f29ae28fdd6415ba194166eeab9d16, type: 3}
+  - DeathExplosion: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

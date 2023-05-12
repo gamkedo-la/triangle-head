@@ -68,6 +68,12 @@ public class PlayerMovement : MonoBehaviour
         
         if(recoverySeconds > 0.0f){
             recoverySeconds -= Time.deltaTime; //this isn't machine depedant, deltaTime is time between frames
+            if(recoverySeconds < 0.0f){
+                hidePlayer(false);
+            } else {
+                int flickerScaledNumber = (int)(recoverySeconds * 10.0f); //tuning //10ths of a second
+                hidePlayer(flickerScaledNumber % 2 == 1);
+            }
         } 
         HandleInputs();
         LocalMove(h, v, xySpeed);
@@ -94,8 +100,6 @@ public class PlayerMovement : MonoBehaviour
             if(recoverySeconds > 0.0f){
                 return false;
             }
-            recoverySeconds = timeToRecovery;
-            Debug.Log(playerHealth);
             playerHealth--;
 
             if (playerHealth == 2)
@@ -103,13 +107,11 @@ public class PlayerMovement : MonoBehaviour
                 //renderer.material = yellowMaterial;
                 renderer.material.SetColor("_Color", Color.yellow);
                 //^ changing the material might have slight advantages over chaging the material's property
-                audioSource.PlayOneShot(collisionAudio);
             }
             else if (playerHealth == 1)
             {
                 //renderer.material = redMaterial;
                 renderer.material.SetColor("_Color", Color.red);
-                audioSource.PlayOneShot(collisionAudio);
             }
             else if (playerHealth == 0)
             {
@@ -119,6 +121,13 @@ public class PlayerMovement : MonoBehaviour
                 //set planeSpeed to 0 (will stop game movement)
                 //death animation
                 //
+                
+            }
+
+            if(playerHealth > 0){
+                recoverySeconds = timeToRecovery;
+                audioSource.PlayOneShot(collisionAudio);
+            } else {
                 audioSource.PlayOneShot(deathAudio);
             }
 
@@ -138,12 +147,16 @@ public class PlayerMovement : MonoBehaviour
     }
     */
 
+    public void hidePlayer(bool toHide){
+        for(int i = 0; i < transform.childCount; i++){
+            transform.GetChild(i).gameObject.SetActive(toHide == false);
+        }        
+    }
+
     IEnumerator WaitThenGameOver(){
         planeMovement pmScript = gameObject.GetComponentInParent<planeMovement>();
         pmScript.enabled = false;
-        for(int i = 0; i < transform.childCount; i++){
-            transform.GetChild(i).gameObject.SetActive(false);
-        }
+        hidePlayer(true);
         GameObject.Instantiate(DeathExplosion, transform.position, Quaternion.identity); //keeps the explosion upright
         yield return new WaitForSeconds(3.0f);
         //Debug.Log("gameover");

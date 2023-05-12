@@ -15,11 +15,17 @@ public static class MeshHelper
         var hasTangents = mesh.HasVertexAttribute(VertexAttribute.Tangent);
         var hasUv1 = mesh.HasVertexAttribute(VertexAttribute.TexCoord1);
 
-        var oldTriangles = mesh.triangles;
-        var numberOfVertices = oldTriangles.Length; 
-
+        var numberOfSubMeshes = mesh.subMeshCount;
+        int[][] oldTrianglesArray = new int[numberOfSubMeshes][];
+        int[][] newTrianglesArray = new int[numberOfSubMeshes][];
+        var numberOfVertices = 0;
+        for (var subMeshIndex = 0; subMeshIndex < numberOfSubMeshes; subMeshIndex++)
+        {
+            oldTrianglesArray[subMeshIndex] = mesh.GetTriangles(subMeshIndex);
+            numberOfVertices += oldTrianglesArray[subMeshIndex].Length;
+        }
+        
         var barycentric = new Vector3[numberOfVertices];
-        var triangles = new int[numberOfVertices];
         var vertices = new Vector3[numberOfVertices];
         var uv0 = new Vector2[numberOfVertices];
         var uv1 = hasUv1 ? new Vector2[numberOfVertices] : null;
@@ -47,33 +53,41 @@ public static class MeshHelper
             mesh.GetTangents(oldTangents);
         }
 
-
-        // Need to make each vertex unique in order to properly interpolate over barycentric coordinates
-        // (What the geometry shader did, but here we bake it in the mesh instead)
-        for (var i = 0; i < numberOfVertices; i += 3)
+        var vertexBaseIndex = 0;
+        for (var subMeshIndex = 0; subMeshIndex < numberOfSubMeshes; subMeshIndex++)
         {
-            for (var vi = i; vi < i + 3; vi++)
+            var oldTriangles = oldTrianglesArray[subMeshIndex];
+            var numberOfSubMeshVertices = oldTriangles.Length;
+            var triangles = newTrianglesArray[subMeshIndex] = new int[numberOfSubMeshVertices];
+            // Need to make each vertex unique in order to properly interpolate over barycentric coordinates
+            // (What the geometry shader did, but here we bake it in the mesh instead)
+            for (var i = 0; i < numberOfSubMeshVertices; i += 3)
             {
-                var oldIndex = oldTriangles[vi];
-
-                triangles[vi] = vi;
-                vertices[vi] = oldVertices[oldIndex];
-                uv0[vi] = oldUv0[oldIndex];
-                if (hasUv1)
+                for (var vi = i; vi < i + 3; vi++)
                 {
-                    uv1[vi] = oldUv1[oldIndex];
+                    var oldIndex = oldTriangles[vi];
+
+                    triangles[vi] = vi + vertexBaseIndex;
+                    vertices[vi + vertexBaseIndex] = oldVertices[oldIndex];
+                    uv0[vi + vertexBaseIndex] = oldUv0[oldIndex];
+                    if (hasUv1)
+                    {
+                        uv1[vi + vertexBaseIndex] = oldUv1[oldIndex];
+                    }
+
+                    normals[vi + vertexBaseIndex] = oldNormals[oldIndex];
+                    if (hasTangents)
+                    {
+                        tangents[vi + vertexBaseIndex] = oldTangents[oldIndex];
+                    }
                 }
 
-                normals[vi] = oldNormals[oldIndex];
-                if (hasTangents)
-                {
-                    tangents[vi] = oldTangents[oldIndex];
-                }
+                barycentric[i + vertexBaseIndex] = Vector3.right;
+                barycentric[i + 1 + vertexBaseIndex] = Vector3.up;
+                barycentric[i + 2 + vertexBaseIndex] = Vector3.forward;
             }
 
-            barycentric[i] = Vector3.right;
-            barycentric[i + 1] = Vector3.up;
-            barycentric[i + 2] = Vector3.forward;
+            vertexBaseIndex += numberOfSubMeshVertices;
         }
 
         mesh.SetVertices(vertices);
@@ -90,7 +104,11 @@ public static class MeshHelper
         }
 
         mesh.SetUVs(2, barycentric);
-        mesh.SetTriangles(triangles, 0);
+        
+        for (var subMeshIndex = 0; subMeshIndex < numberOfSubMeshes; subMeshIndex++)
+        {
+            mesh.SetTriangles(newTrianglesArray[subMeshIndex], subMeshIndex);
+        }
 
         return mesh;
     }

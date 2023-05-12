@@ -1,0 +1,16 @@
+newmtl canyon-rock
+Kd 0.7264151 0.5821328 0.2101578
+d 1
+
+newmtl canyon-strata
+Kd 0.7254902 0.5207792 0.2117647
+d 1
+
+newmtl canyon-ledge
+Kd 0.6132076 0.5920627 0.09641621
+d 1
+
+newmtl canyon-top
+Kd 0.5988123 0.9150943 0.290643
+d 1
+

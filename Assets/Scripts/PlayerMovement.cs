@@ -44,8 +44,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //triangleHeadModel = transform.Find("triangle-head");
-        renderer = triangleHeadModel.GetComponent<Renderer>();
-        
+        renderer = triangleHeadModel.GetComponent<Renderer>();        
     }
 
     Rigidbody rb;
@@ -160,7 +159,15 @@ public class PlayerMovement : MonoBehaviour
         GameObject.Instantiate(DeathExplosion, transform.position, Quaternion.identity); //keeps the explosion upright
         yield return new WaitForSeconds(3.0f);
         //Debug.Log("gameover");
-        SceneManager.LoadScene("GameOver");
+        //add the if level1, else level2 script over here
+        Scene currentScene = SceneManager.GetActiveScene();
+        if(currentScene.name == "Level 1"){
+            Debug.Log("game over reached");
+            SceneManager.LoadScene("GameOverLevel1");
+        } else if (currentScene.name == "Level 2"){
+            SceneManager.LoadScene("GameOverLevel2");
+        }
+        //SceneManager.LoadScene("GameOver");
     }
 
     void LocalMove(float x, float y, float speed)

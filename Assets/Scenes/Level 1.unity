@@ -6699,7 +6699,7 @@ PrefabInstance:
       objectReference: {fileID: 1474296135}
     - target: {fileID: 3197021191900822166, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
       propertyPath: playerHealth
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3197021191900822166, guid: b9f8d9cf7c91e4cd6b8329b629702d6d, type: 3}
       propertyPath: rightBoundary
